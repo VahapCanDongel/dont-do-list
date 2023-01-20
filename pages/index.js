@@ -38,7 +38,7 @@ export default function Home() {
       </Head>
       <main className='w-full h-screen grid grid-cols-3 gap-4 content-center'>
         {
-          allPosts.map((post) => (
+          allPosts?.map((post) => (
             <Item {...post}>
                 <div className="flex gap-2">
                   <button onClick={() => deletePosts(post.id)} className="bg-red-400 text-white p-2 text-sm rounded-md">Delete Item</button>
@@ -48,7 +48,6 @@ export default function Home() {
           ))
 
         }
-        <Item/>
       </main>
     </div>
   )
